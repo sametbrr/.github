@@ -1,0 +1,43 @@
+name: Bug report
+description: Something does not work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Questions and ideas belong in this repository's **Discussions** tab.
+        Security problems: use **Security → Report a vulnerability** instead of an issue.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag, npm/NuGet version or commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime (Node, .NET, Go, Python) and, for agent plugins, the host (Claude Code or Codex) and model
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Remove secrets, tokens and personal data before pasting.
+      render: shell
